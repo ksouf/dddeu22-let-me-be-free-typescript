@@ -1,6 +1,7 @@
 import {RecruiterRepository} from "./RecruiterRepository";
 import Recruiter from "../../../shared-kernel/model/Recruiter";
 import Candidate from "../../../shared-kernel/model/Candidate";
+import HRRecruiter from "./HRRecruiter";
 
 export default class FakeRecruiterRepository implements RecruiterRepository {
   public readonly _recruiters: Recruiter[];
@@ -128,7 +129,7 @@ export default class FakeRecruiterRepository implements RecruiterRepository {
     ];
   }
 
-  findAll(): Recruiter[] {
-    return this._recruiters;
+  findAll(): HRRecruiter[] {
+    return this._recruiters.map(recruiter => new HRRecruiter(recruiter));
   }
 }
