@@ -2,11 +2,12 @@ import {RoomRepository} from "./RoomRepository";
 import Space from "../../../shared-kernel/model/Space";
 import Recruiter from "../../../shared-kernel/model/Recruiter";
 import InterviewDate from "./InterviewDate";
+import Room from "./Room";
 
 export default class FakeRoomRepository implements RoomRepository {
 
-  book(interviewDate: InterviewDate): Space {
-    return new Space("",
+  book(interviewDate: InterviewDate): Room {
+    return new Room(new Space("",
         "",
         "Paris",
         5,
@@ -25,7 +26,7 @@ export default class FakeRoomRepository implements RoomRepository {
             ])
           ]
         ])
-    );
+    ));
   }
 
   cancel(spaceId: String): void {

@@ -1,8 +1,8 @@
 import Recruiter from "../../../shared-kernel/model/Recruiter";
-import HRCandidate from "./HRCandidate";
+import Profile from "./Profile";
 import InterviewDate from "./InterviewDate";
 
-export default class HRRecruiter {
+export default class Consultant {
   private readonly _recruiter: Recruiter;
 
   constructor(recruiter: Recruiter) {
@@ -15,7 +15,7 @@ export default class HRRecruiter {
     ).length > 0
   }
 
-  public canTest(candidate: HRCandidate) {
+  public canTest(candidate: Profile) {
     return candidate.getSkills()
     .every(skill => this._recruiter._skills.indexOf(skill) != -1)
   }

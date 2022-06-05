@@ -1,27 +1,27 @@
-import HRRecruiter from "./HRRecruiter";
-import HRCandidate from "./HRCandidate";
+import Consultant from "./Consultant";
+import Profile from "./Profile";
 import InterviewDate from "./InterviewDate";
 import Room from "./Room";
 
 export default class Interview {
-  public readonly _recruiter: HRRecruiter;
-  public readonly _candidate: HRCandidate;
-  public readonly _interviewDate: InterviewDate;
-  public readonly _room: Room;
+  private readonly _consultant: Consultant;
+  private readonly _profile: Profile;
+  private readonly _interviewDate: InterviewDate;
+  private readonly _room: Room;
 
-  constructor(recruiter: HRRecruiter, candidate: HRCandidate, interviewDate: InterviewDate, room: Room) {
-    this._recruiter = recruiter;
-    this._candidate = candidate;
+  constructor(recruiter: Consultant, candidate: Profile, interviewDate: InterviewDate, room: Room) {
+    this._consultant = recruiter;
+    this._profile = candidate;
     this._interviewDate = interviewDate;
     this._room = room;
   }
 
-  public getRecruiter() {
-    return this._recruiter;
+  public getConsultant() {
+    return this._consultant;
   }
 
-  public getCandidate() {
-    return this._candidate;
+  public getProfile() {
+    return this._profile;
   }
 
   public getInterviewDate() {

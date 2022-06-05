@@ -1,7 +1,7 @@
-import Space from "../../../shared-kernel/model/Space";
 import InterviewDate from "./InterviewDate";
+import Room from "./Room";
 
 export interface RoomRepository {
-  book: (interviewDate: InterviewDate) => Space;
+  book: (interviewDate: InterviewDate) => Room;
   cancel: (spaceId: String) => void;
 }

@@ -1,9 +1,9 @@
-import {RecruiterRepository} from "./RecruiterRepository";
+import {ConsultantRepository} from "./ConsultantRepository";
 import Recruiter from "../../../shared-kernel/model/Recruiter";
 import Candidate from "../../../shared-kernel/model/Candidate";
-import HRRecruiter from "./HRRecruiter";
+import Consultant from "./Consultant";
 
-export default class FakeRecruiterRepository implements RecruiterRepository {
+export default class FakeConsultantRepository implements ConsultantRepository {
   public readonly _recruiters: Recruiter[];
 
   constructor() {
@@ -129,7 +129,7 @@ export default class FakeRecruiterRepository implements RecruiterRepository {
     ];
   }
 
-  findAll(): HRRecruiter[] {
-    return this._recruiters.map(recruiter => new HRRecruiter(recruiter));
+  findAll(): Consultant[] {
+    return this._recruiters.map(recruiter => new Consultant(recruiter));
   }
 }
