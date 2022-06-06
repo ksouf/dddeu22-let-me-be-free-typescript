@@ -18,17 +18,6 @@ export default class Profile {
     return this._profile._skills;
   }
 
-  public checkProfile() {
-    let profileId = this.getId();
-    if (this.isInvalid(profileId)) {
-      throw "profile id is missing";
-    }
-  }
-
-  public isInvalid(profileId: string) {
-    return !profileId;
-  }
-
   public findConsultant(interviewDate: InterviewDate, consultants: Array<Consultant>) {
     let foundConsultant = consultants
     .filter(consultant => consultant.isAvailable(interviewDate))
@@ -39,5 +28,9 @@ export default class Profile {
     } else {
       return foundConsultant.at(0)
     }
+  }
+
+  public toCandidate() {
+    return this._profile;
   }
 }
