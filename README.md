@@ -14,13 +14,12 @@ In this Kata we will focus on the first 3 patterns which are Shared Kernel, ACL 
 To do this Kata you need following tools :
 - Your favorite IDE (mine is IntelliJ Idea)
 - node and npm
+- Jest installed globally (run this cmd npm install jest --global)
 - Git
 
 # How to run this Kata
 - Clone this project somewhere in your machine (git clone git@github.com:SepehrNamdar/DDDEU22_Let-Me-Be-Free.git)
-- Open Shared Kernel and Let Me Be Free maven projects in 2 separate IDE to simulate 2 different applications that we can build separately
-- First build Shared Kernel project using Maven (mvn clean install) : You should obtain BUILD SUCCESSFUL
-- Then build Let Le Be Free project using Maven (mvn clean install) : You should obtain BUILD SUCCESSFUL with successful tests
+- build the project using Npm (npm install then npm test) : You should obtain PASS with successful tests
 - Run tests to ensure that you have green ones
 
 # How to do this Kata
