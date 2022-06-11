@@ -18,7 +18,7 @@ To do this Kata you need following tools :
 - Git
 
 # How to run this Kata
-- Clone this project somewhere in your machine (git clone git@github.com:SepehrNamdar/DDDEU22_Let-Me-Be-Free.git)
+- Clone this project somewhere in your machine (git clone git@github.com:ksouf/dddeu22-let-me-be-free-typescript.git)
 - build the project using Npm (npm install then npm test) : You should obtain PASS with successful tests
 - Run tests to ensure that you have green ones
 
